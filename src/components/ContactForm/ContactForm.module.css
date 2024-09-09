@@ -1,0 +1,25 @@
+.contactForm {
+  width: 300px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.inputField {
+  width: 100%;
+}
+
+.addContactBtn {
+  align-self: center;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.errorMessage {
+  font-size: small;
+  color: tomato;
+}
