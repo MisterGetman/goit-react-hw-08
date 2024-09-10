@@ -1,0 +1,10 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 128px;
+  text-align: center;
+}
+
+.homeContainer p {
+  font-size: 36px;
+}

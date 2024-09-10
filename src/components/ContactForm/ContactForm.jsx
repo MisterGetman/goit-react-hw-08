@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import css from "./ContactForm.module.css";
-import { addContact } from "../../redux/contactsOps";
+import { addContact } from "../../redux/contacts/operations";
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -30,7 +30,7 @@ const ContactForm = () => {
       .max(50, "Too Long!")
       .required("Required"),
     number: Yup.string()
-      .matches(/^\d{3}-\d{3}-\d{4}$/, "Should match pattern XXX-XXX-XXXX")
+      .matches(/^\d{3}-\d{2}-\d{2}$/, "Should match pattern XXX-XX-XX")
       .required("Required"),
   });
 
@@ -61,7 +61,7 @@ const ContactForm = () => {
             className={css.inputField}
             type="tel"
             name="number"
-            placeholder="XXX-XXX-XXXX"
+            placeholder="XXX-XX-XX"
           />
           <ErrorMessage
             name="number"
